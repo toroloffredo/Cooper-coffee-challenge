@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Styles/styles.css">
+        <title>Cooper's Coffee Challenge</title>
+    </head>
+
+    <body> 
+        <main>
+            <!--All the html components that make the initial splash screen-->
+       
+            
+            <div id="splash-screen">
+                <!--Look for logo splash image-->
+                <h1>Twin Peaks</h1>
+                <h2>Cooper's Coffee Challenge</h2>
+                <img src="/images/download.png" alt="" class="cooperLogo"> 
+                <br>
+                <div id="intro-buttons">
+                    <button id="start-button">Start Game</button>
+                    <button id="instructions-button">Instructions</button>
+                </div>
+
+            </div>
+
+            <!--All the html components that make the main game screen-->
+            <div id="gameplay">
+
+                <div id="scoreTimer">
+                    <p>Score: <span id="score">0</span></p>
+                    <p>Time Remaining: <span id="timer">1:00</span></p>
+                </div>
+                <div id="game-screen"></div>
+            </div>
+
+            <!-- this will toggle between game won and game lost-->
+            <div id="game-over">
+                <!--game over image here-->
+                <img src="......" alt="" class="logo-img" />
+                <h1>Game Over</h1>
+                <br />
+                <button id="restart-button">Restart</button>
+                <!-- -->
+                
+            </div>
+
+
+
+
+
+
+        </main>
+        <!--Link JS files here-->
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/game.js"></script>
+        <script type="text/javascript" src="js/player.js"></script>
+        <script type="text/javascript" src="js/obstacle.js"></script>
+    </body>
+</html>

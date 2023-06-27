@@ -1,10 +1,12 @@
 class Player {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.height = 100;
+    this.width = 80;
+    this.height = 150;
+    this.left = 89;
+    this.top = 680;
     this.directionY = 0;
-    this.up = 100;
-    this.down = 100;
+
     this.element = document.createElement("img");
     this.element.src = "/images/download.png";
     this.element.style.position = "absolute";

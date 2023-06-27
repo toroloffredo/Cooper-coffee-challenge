@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    z-index: 0;
 }
 h1 {
     color: #14A61D;
@@ -39,9 +40,6 @@ h2 {
     margin-top: 400px;
     margin-left: 70px;
 }
-
-
-
 #intro-buttons {
     margin-top: 300px;
 }
@@ -51,7 +49,17 @@ h2 {
     height: 800px;
     width: 800px;
     background-image: url("/images/twinpeaksRR1.jpg");  
-    
+}
+
+#game-screen {
+    display: none;
+    position: relative;
+    align-content: center;
+    overflow: hidden;
+    top: 31px;
+    background-image: url("/images/twinpeaksRR2.jpg");
+    background-size: cover;
+    z-index: 1;
 }
 
 #scoreTimer {
@@ -59,15 +67,32 @@ h2 {
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
     font-family: "PressStart", sans-serif;
+    z-index: 3;
+    
 }
 
+#score  {
+    display: none;
+    color: #FDFBFB;
+    text-shadow: 4px 3px 0px #040404;
+    font-family: "PressStart", sans-serif;
+    z-index: 2;
+}
+#timer {
+    display: none;
+    color: #FDFBFB;
+    text-shadow: 4px 3px 0px #040404;
+    font-family: "PressStart", sans-serif;
+}
+
+/*
 #gameplay {
-    display: flex;
+    display: none;
     width: 100vw;
     padding: 0;
     justify-content: center;
-
-}
+    background-image: url("/images/twinpeaksRR1.jpg");
+}*/
 
 #game-over {
     display: none;

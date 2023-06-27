@@ -1,3 +1,4 @@
+
 class Obstacle {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;

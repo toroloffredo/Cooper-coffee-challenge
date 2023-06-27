@@ -8,32 +8,35 @@ window.addEventListener("load", () => {
     game = new Game();
     game.start();
     document.addEventListener("keydown", (event) => {
+      // console.log(event);
       const key = event.key;
-      const possibleKeystrokes = ["ArrowUp", "ArrowDown", "SpaceBar"];
+      const possibleKeystrokes = ["ArrowUp", "ArrowDown", "SpaceBar",];
       if (possibleKeystrokes.includes(key)) {
         switch (key) {
-            case "ArrowUp":
-                game.player.directionY = -2;
-                break;
-            case "ArrowDown":
-                game.player.directionY = 2;
-                break;
-            case "SpaceBar":
-                game.player.placeholder = 0;
-                break;
+          case "ArrowUp":
+            game.player.directionY = -1; 
+            break;
+          case "ArrowDown":
+            game.player.directionY = 1;
+            break;
+          case "Space":
+          game.player.placeholder = 0;
+          break;
         }
       }
     });
     document.addEventListener("keyup", (event) => {
+    
       const key = event.key;
-      const possibleKeystrokes = ["ArrowUp", "ArrowDown","SpaceBar"];
+        // console.log(key);
+      const possibleKeystrokes = ["ArrowUp", "ArrowDown", "SpaceBar"];
       if (possibleKeystrokes.includes(key)) {
         switch (key) {
-            case "ArrowUp":
-            case "ArrowDown":
-            case "SpaceBar":
-                game.player.directionY = 0;
-                break;
+          case "ArrowUp":
+          case "ArrowDown":
+            //case "Space":
+            game.player.directionY = 0;
+            break;
         }
       }
       game.player.directionY = 0;

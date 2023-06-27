@@ -4,8 +4,9 @@ class Obstacle {
     this.gameScreen = gameScreen;
     this.width = 80;
     this.height = 150;
-    this.left = Math.floor(Math.random() * 300 + 70);
-    this.top = -150;
+    // Rememenber to double check the "left" amount if you change to px units.
+    this.left = 80; 
+    this.top = Math.floor(Math.random() * 300 + 70);
     this.directionX = 0;
     this.directionY = 0;
     this.element = document.createElement("img");
@@ -16,18 +17,23 @@ class Obstacle {
     this.element.style.height = `${this.height}px`;
 
     this.element.style.top = `${this.top}px`;
-    this.element.style.left = `${this.left}px`;
+    // Using vw as UNIT so its dinamic towards window width. Change to px
+    // if this gives you problems.
+    this.element.style.left = `${this.left}vw`;
 
     this.gameScreen.appendChild(this.element);
   }
 
   move() {
-    this.top += 3;
+    this.left -= 0.5;
+    
     this.updatePosition();
   }
 
   updatePosition() {
-    this.element.style.left = `${this.left}px`;
-    this.element.style.top = `${this.top}px`;
+    // Using vw as UNIT so its dinamic towards window width. Change to px 
+    // if this gives you problems.
+    this.element.style.left = `${this.left}vw`;
+    
   }
 }

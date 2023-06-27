@@ -57,10 +57,11 @@ h2 {
     position: relative;
     align-content: center;
     overflow: hidden;
-    top: 31px;
+    top: -12px;
     background-image: url("./images/twinpeaksRR2.jpg");
     background-size: cover;
     z-index: 1;
+    background-position: bottom;
 }
 
 #scoreTimer {

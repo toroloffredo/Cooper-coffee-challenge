@@ -8,7 +8,7 @@ class Game {
     this.scoresChecker = document.getElementById("score");
     this.timer = document.getElementById("timer");
     this.board = document.getElementById("scoreTimer")
-    this.height = 1000;
+    this.height = 830;
     this.width = 95;
  
     this.player = new Player(this.gameScreen);
@@ -21,7 +21,7 @@ class Game {
   start() {
     this.startScreen.style.display = "none";
     this.gameScreen.style.display = "block";
-    //this.gameplay.style.display = "block";
+    // -- leave commented out for now -- this.gameplay.style.display = "block";
 
     this.gameScreen.style.height = `${this.height}px`;
     this.gameScreen.style.width = `${this.width}vw`;
@@ -31,12 +31,13 @@ class Game {
     this.board.style.display = "inline-block";
     
   
-    //this.gameLoop();
+    this.gameLoop();
   }
 
 
   gameLoop() {
-    //this.update();
+    this.update();
+
 
     if (this.animateId % 200 === 0) {
       this.obstacles.push(new Obstacle(this.gameScreen));
@@ -58,9 +59,11 @@ class Game {
     this.obstacles.forEach((obstacle) => {
       obstacle.move();
       if (this.player.didCollide(obstacle)) {
+        console.log('hit')
         obstacle.element.remove();
-      } else if (obstacle.top > this.gameScreen.offsetHeight) {
         this.score += 1;
+        this.scoresChecker.textContent = `${this.score}`
+      } else if (obstacle.left > this.gameScreen.offsetWidth) {
         this.scoresChecker = `${this.score}`;
       } else {
         obstaclesToKeep.push(obstacle);

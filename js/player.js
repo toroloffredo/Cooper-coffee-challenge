@@ -3,7 +3,7 @@ class Player {
     this.gameScreen = gameScreen;
     this.width = 80;
     this.height = 150;
-    this.left = 89;
+    this.left = 47;
     this.top = 680;
     this.directionY = 0;
 
@@ -20,9 +20,15 @@ class Player {
     this.gameScreen.appendChild(this.element);
   }
 
+  
   move() {
-   
     this.top += this.directionY;
+    if(this.top < 10) {
+        this.top = 10
+    }
+    if(this.top > this.gameScreen.offsetHeight - this. height - 10){
+        this.top = this.gameScreen.offsetHeight - this.height - 10;
+    }
 
     this.updatePosition();
   }
@@ -47,4 +53,5 @@ class Player {
       return false;
     }
   }
+  
 }

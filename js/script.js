@@ -19,9 +19,9 @@ window.addEventListener("load", () => {
           case "ArrowDown":
             game.player.directionY = 10;
             break
-          /*case "Space":
-          game.player.placeholder = 0;
-          break*/
+          case "Space":
+          game.player.placeholder = 1;
+          break
         }
         game.player.move()
       }
@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
         switch (key) {
           case "ArrowUp":
           case "ArrowDown":
-            //case "Space":
+          case "Space":
             game.player.directionY = 0;
             break;
         }

@@ -21,12 +21,14 @@ class Player {
   }
 
   move() {
-    this.up -= this.directionY;
-    this.down += this.directionY;
+   
+    this.top += this.directionY;
+
+    this.updatePosition();
   }
 
   updatePosition() {
-    this.element.style.left = `${this.left}px`;
+    //this.element.style.left = `${this.left}px`;
     this.element.style.top = `${this.top}px`;
   }
 

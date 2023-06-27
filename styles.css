@@ -18,23 +18,54 @@ body {
     align-items: center;
     z-index: 0;
 }
+#splash-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    width: 800px;
+    background-image: url("./images/twinpeaksRR1.jpg");
+    text-align: center;
+
+}
+
+#splash-screen h1,
+#splash-screen h2 {
+    display: block;
+    
+    font-family: "PressStart", sans-serif;
+    z-index: 2;
+    margin : 0;
+}
+
 h1 {
     color: #14A61D;
     text-shadow: 4px 3px 0px #073709;
-    font-family: "PressStart", sans-serif;
     position:absolute;
     align-items: center;
     top: 50px;
-    left: 32%;
+    
 }
 h2 {
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
-    font-family: "PressStart", sans-serif;
     position: absolute;
     top: 150px;
-    left: 20%;
+    
 }
+
+#game-over-text {
+    top: 292px;
+}
+.cooperPixel {
+    position: relative;
+    top: 356px;
+    height: 500px;
+    width: 637px;
+}
+
+
+
 .cooperLogo {
     height: 500px;
     margin-top: 400px;
@@ -43,29 +74,37 @@ h2 {
 #intro-buttons {
     margin-top: 300px;
 }
-#splash-screen {
-    display: flex;
-    align-items: center;
-    height: 800px;
-    width: 800px;
-    background-image: url("./images/twinpeaksRR1.jpg");  
-    /* background-position: center;*/
-}
 
 #game-screen {
     display: none;
     position: relative;
     align-content: center;
     overflow: hidden;
-    top: -12px;
+    top: 30px;
     background-image: url("./images/twinpeaksRR2.jpg");
     background-size: cover;
     z-index: 1;
     background-position: bottom;
 }
 
+#game-over {
+    display: none;
+    position: relative;
+    align-content: center;
+    overflow: hidden;
+    top: -128px;
+    height: 959px;
+    width: 900px;
+    background-image: url("./images/twinpeaksRR1.jpg");
+    z-index: 1;
+}
+
+
+
 #scoreTimer {
     display: none;
+    position: relative;
+    top: 20px;
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
     font-family: "PressStart", sans-serif;
@@ -148,4 +187,8 @@ button:after {
       top: 0;
       border-left: 7px #040404 solid;
       border-right: 7px #040404 solid;
+}
+
+#restart-button {
+    top: 350px;
 }

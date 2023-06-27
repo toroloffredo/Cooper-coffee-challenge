@@ -5,7 +5,7 @@ class Obstacle {
     this.width = 80;
     this.height = 150;
     // Rememenber to double check the "left" amount if you change to px units.
-    this.left = 80; 
+    this.left = 98; 
     this.top = Math.floor(Math.random() * 300 + 70);
     this.directionX = 0;
     this.directionY = 0;
@@ -23,10 +23,11 @@ class Obstacle {
 
     this.gameScreen.appendChild(this.element);
   }
+  
 
   move() {
-    this.left -= 0.5;
-    
+    this.left -= 0.3;
+
     this.updatePosition();
   }
 

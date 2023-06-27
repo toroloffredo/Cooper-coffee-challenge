@@ -6,13 +6,14 @@ class Game {
     //this.gameplay = document.getElementById("gameplay");
     this.gameEndScreen = document.getElementById("game-over");
     this.scoresChecker = document.getElementById("score");
+    this.lifesChecker = document.getElementById("life");  
     this.timer = document.getElementById("timer");
-    this.board = document.getElementById("scoreTimer")
-    this.height = 830;
-    this.width = 95;
- 
+    this.board = document.getElementById("scoreTimer");
+    this.height = 700;
+    this.width = 900;
     this.player = new Player(this.gameScreen);
     this.obstacles = [new Obstacle(this.gameScreen)];
+    this.life = 3;
     this.score = 0;
     this.isGameOver = false;
     this.animateId;
@@ -24,7 +25,7 @@ class Game {
     // -- leave commented out for now -- this.gameplay.style.display = "block";
 
     this.gameScreen.style.height = `${this.height}px`;
-    this.gameScreen.style.width = `${this.width}vw`;
+    this.gameScreen.style.width = `${this.width}px`;
 
     this.scoresChecker.style.display = "inline-block";
     this.timer.style.display = "inline-block";
@@ -34,6 +35,19 @@ class Game {
     this.gameLoop();
   }
 
+  /*
+  gameover(){
+    this.startScreen.style.display = "none";
+    this.gameScreen.style.display = "none";
+    this.gameEndScreen.style.display = "block";
+
+  }*/
+
+  maxwidth(){
+    if (this.width >= 1000){
+      this.width === 1000;
+    }
+  }
 
   gameLoop() {
     this.update();
@@ -46,6 +60,7 @@ class Game {
     if (this.isGameOver) {
       console.log("Game Over");
       this.gameScreen.style.display = "none";
+      this.board.style.display = "none";
       this.gameEndScreen.style.display = "block";
     } else {
       this.animateId = requestAnimationFrame(() => this.gameLoop());
@@ -59,10 +74,14 @@ class Game {
     this.obstacles.forEach((obstacle) => {
       obstacle.move();
       if (this.player.didCollide(obstacle)) {
-        console.log('hit')
+        console.log("hit");
         obstacle.element.remove();
-        this.score += 1;
-        this.scoresChecker.textContent = `${this.score}`
+        /* -- saving it so we can use it for projectiles. --
+        this.score += 1; */
+        this.life -= 1;
+        /* -- saving it so we can use it for projectiles. --
+        this.scoresChecker.textContent = `${this.score}` */
+        this.lifesChecker.textContent = `${this.life}`;
       } else if (obstacle.left > this.gameScreen.offsetWidth) {
         this.scoresChecker = `${this.score}`;
       } else {
@@ -70,7 +89,11 @@ class Game {
       }
     });
     this.obstacles = obstaclesToKeep;
-
+    if (this.life === 0){
+      this.isGameOver === true;
+      return
+      //gameOver();
+    }
   }
 }
 

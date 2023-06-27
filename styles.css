@@ -1,15 +1,15 @@
 @font-face {
     font-family: "Silkscreen";
-    src: url(/Styles/fonts/slkscre.ttf) format("truetype");
+    src: url(./fonts/slkscre.ttf) format("truetype");
     font-family: "PressStart";
-        src: url(/Styles/fonts/PressStart2P-Regular.ttf) format("truetype");
+        src: url(./fonts/PressStart2P-Regular.ttf) format("truetype");
 }
 body {
     margin: 0;
     padding: 0;
     text-align: center;
     overflow: hidden;
-    background: url("/images/twin\ peaks\ red\ room.jpeg");  
+    background: url("./images/twin\ peaks\ red\ room.jpeg");  
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -48,7 +48,7 @@ h2 {
     align-items: center;
     height: 800px;
     width: 800px;
-    background-image: url("/images/twinpeaksRR1.jpg");  
+    background-image: url("./images/twinpeaksRR1.jpg");  
 }
 
 #game-screen {
@@ -57,7 +57,7 @@ h2 {
     align-content: center;
     overflow: hidden;
     top: 31px;
-    background-image: url("/images/twinpeaksRR2.jpg");
+    background-image: url("./images/twinpeaksRR2.jpg");
     background-size: cover;
     z-index: 1;
 }

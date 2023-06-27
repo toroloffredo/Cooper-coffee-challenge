@@ -9,8 +9,8 @@ class Game {
     this.lifesChecker = document.getElementById("life");  
     this.timer = document.getElementById("timer");
     this.board = document.getElementById("scoreTimer");
-    this.height = 700;
-    this.width = 900;
+    this.height = 650;
+    this.width = 1100;
     this.player = new Player(this.gameScreen);
     this.obstacles = [new Obstacle(this.gameScreen)];
     this.life = 3;
@@ -28,20 +28,13 @@ class Game {
     this.gameScreen.style.width = `${this.width}px`;
 
     this.scoresChecker.style.display = "inline-block";
-    this.timer.style.display = "inline-block";
+    //this.timer.style.display = "inline-block";
     this.board.style.display = "inline-block";
     
   
     this.gameLoop();
   }
 
-  /*
-  gameover(){
-    this.startScreen.style.display = "none";
-    this.gameScreen.style.display = "none";
-    this.gameEndScreen.style.display = "block";
-
-  }*/
 
   maxwidth(){
     if (this.width >= 1000){
@@ -90,7 +83,8 @@ class Game {
     });
     this.obstacles = obstaclesToKeep;
     if (this.life === 0){
-      this.isGameOver === true;
+      this.isGameOver = true;
+      console.log("Game Over");
       return
       //gameOver();
     }

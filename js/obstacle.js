@@ -2,10 +2,10 @@
 class Obstacle {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.width = 80;
-    this.height = 150;
+    this.width = 70;
+    this.height = 135;
     // Rememenber to double check the "left" amount if you change to px units.
-    this.left = 98; 
+    this.left = 65; 
     this.top = Math.floor(Math.random() * 300 + 70);
     this.directionX = 0;
     this.directionY = 0;

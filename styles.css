@@ -4,12 +4,13 @@
     font-family: "PressStart";
         src: url(./fonts/PressStart2P-Regular.ttf) format("truetype");
 }
+
 body {
     margin: 0;
     padding: 0;
     text-align: center;
     overflow: hidden;
-    background: url("./images/twin\ peaks\ red\ room.jpeg");  
+    background: url("./images/pixelatedBackground1.png");  
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -18,13 +19,14 @@ body {
     align-items: center;
     z-index: 0;
 }
+
 #splash-screen {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 800px;
     width: 800px;
-    background-image: url("./images/twinpeaksRR1.jpg");
+    background-image: url("./images/pixelatedCurtains.jpeg");
     text-align: center;
 
 }
@@ -32,8 +34,8 @@ body {
 #splash-screen h1,
 #splash-screen h2 {
     display: block;
-    
     font-family: "PressStart", sans-serif;
+    position: absolute;
     z-index: 2;
     margin : 0;
 }
@@ -41,36 +43,40 @@ body {
 h1 {
     color: #14A61D;
     text-shadow: 4px 3px 0px #073709;
-    position:absolute;
     align-items: center;
     top: 50px;
     
 }
+
 h2 {
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
-    position: absolute;
     top: 150px;
     
 }
 
 #game-over-text {
-    top: 292px;
+    position: relative;
+    top: 180px;
+    display: block;
+    font-family: "PressStart", sans-serif;
+    z-index: 2;
+    margin: 0;
 }
+
 .cooperPixel {
     position: relative;
-    top: 356px;
+    top: 230px;
     height: 500px;
     width: 637px;
 }
-
-
 
 .cooperLogo {
     height: 500px;
     margin-top: 400px;
     margin-left: 70px;
 }
+
 #intro-buttons {
     margin-top: 300px;
 }
@@ -81,7 +87,7 @@ h2 {
     align-content: center;
     overflow: hidden;
     top: 30px;
-    background-image: url("./images/twinpeaksRR2.jpg");
+    background-image: url("./images/pixelatedFloor.jpeg");
     background-size: cover;
     z-index: 1;
     background-position: bottom;
@@ -93,13 +99,11 @@ h2 {
     align-content: center;
     overflow: hidden;
     top: -128px;
-    height: 959px;
+    height: 1100px;
     width: 900px;
     background-image: url("./images/twinpeaksRR1.jpg");
     z-index: 1;
 }
-
-
 
 #scoreTimer {
     display: none;
@@ -109,7 +113,6 @@ h2 {
     text-shadow: 4px 3px 0px #040404;
     font-family: "PressStart", sans-serif;
     z-index: 3;
-    
 }
 
 #score  {
@@ -119,21 +122,13 @@ h2 {
     font-family: "PressStart", sans-serif;
     z-index: 2;
 }
+
 #timer {
     display: none;
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
     font-family: "PressStart", sans-serif;
 }
-
-/*
-#gameplay {
-    display: none;
-    width: 100vw;
-    padding: 0;
-    justify-content: center;
-    background-image: url("/images/twinpeaksRR1.jpg");
-}*/
 
 #game-over {
     display: none;
@@ -190,5 +185,5 @@ button:after {
 }
 
 #restart-button {
-    top: 350px;
+    top: 270px;
 }

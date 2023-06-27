@@ -8,7 +8,7 @@ class Player {
     this.directionY = 0;
 
     this.element = document.createElement("img");
-    this.element.src = "/images/download.png";
+    this.element.src = "images/download.png";
     this.element.style.position = "absolute";
 
     this.element.style.width = `${this.width}px`;

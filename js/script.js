@@ -7,10 +7,12 @@ window.addEventListener("load", () => {
     console.log("start game");
     game = new Game();
     game.start();
+
     document.addEventListener("keydown", (event) => {
-      // console.log(event);
       const key = event.key;
-      const possibleKeystrokes = ["ArrowUp", "ArrowDown", "Space"];
+      console.log(event);
+
+      const possibleKeystrokes = ["ArrowUp", "ArrowDown", " "];
       if (possibleKeystrokes.includes(key)) {
         switch (key) {
           case "ArrowUp":
@@ -19,8 +21,9 @@ window.addEventListener("load", () => {
           case "ArrowDown":
             game.player.directionY = 10;
             break;
-            case "Space":
+          case " ":
             game.player.shoot = true;
+            game.player.shooter();
             break;
         }
         game.player.move();
@@ -29,14 +32,16 @@ window.addEventListener("load", () => {
 
     document.addEventListener("keyup", (event) => {
       const key = event.key;
-      // console.log(key);
-      const possibleKeystrokes = ["ArrowUp", "ArrowDown", "Space"];
+      console.log(event);
+      
+      const possibleKeystrokes = ["ArrowUp", "ArrowDown", " "];
       if (possibleKeystrokes.includes(key)) {
         switch (key) {
           case "ArrowUp":
           case "ArrowDown":
             game.player.directionY = 0;
-          case "Space":
+            break;
+          case " ":
             game.player.shoot = false;
             break;
         }

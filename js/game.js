@@ -44,10 +44,11 @@ class Game {
 
   gameLoop() {
     this.update();
-
+    
+    
     
 
-    this.player.shooter = true;
+    
 
     if (this.animateId % 170 === 0) {
       this.obstacles.push(new Obstacle(this.gameScreen));
@@ -65,6 +66,8 @@ class Game {
 
   update() {
     //console.log("Update");
+    this.player.updateProjectiles();
+    
     this.player.move();
     const obstaclesToKeep = [];
     this.obstacles.forEach((obstacle) => {

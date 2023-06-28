@@ -7,6 +7,7 @@ class Player {
     this.top = 680;
     this.directionY = 0;
     this.shoot = false;
+    this.projectiles = [];
 
     this.element = document.createElement("img");
     this.element.src = "./images/download.png";
@@ -20,24 +21,42 @@ class Player {
 
     this.gameScreen.appendChild(this.element);
   }
-     
-  
+
   move() {
     this.top += this.directionY;
-    if(this.top < 10) {
-        this.top = 10
+    if (this.top < 10) {
+      this.top = 10;
     }
-    if(this.top > this.gameScreen.offsetHeight - this. height - 10){
-        this.top = this.gameScreen.offsetHeight - this.height - 10;
+    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
+      this.top = this.gameScreen.offsetHeight - this.height - 10;
     }
 
     this.updatePosition();
   }
 
-  shoot() {
-    if(this.shoot === true){
-        console.log("shoot");
+  shooter() {
+    if (this.shoot) {
+      const projectile = new Projectiles(this.gameScreen,this.top + this.height /2,this.width);
+      projectile.create();
+      projectile.positionX = this.left + this.width;
+      projectile.positionY = this.top + this.height / 2 - projectile.height / 2;
+      
+      this.projectiles.push(projectile);
     }
+  }
+
+  updateProjectiles() {
+    this.projectiles.forEach((projectile) => {
+      projectile.move();
+
+      if (projectile.positionX > this.gameScreen.offsetWidth) {
+        projectile.destroy();
+      }
+    });
+
+    this.projectiles = this.projectiles.filter(
+      (projectile) => projectile.positionX <= this.gameScreen.offsetWidth
+    );
   }
 
   updatePosition() {
@@ -60,5 +79,4 @@ class Player {
       return false;
     }
   }
-  
 }

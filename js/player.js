@@ -6,6 +6,7 @@ class Player {
     this.left = 47;
     this.top = 680;
     this.directionY = 0;
+    this.shoot = 0;
 
     this.element = document.createElement("img");
     this.element.src = "./images/download.png";
@@ -31,6 +32,12 @@ class Player {
     }
 
     this.updatePosition();
+  }
+
+  shoot() {
+    if(this.shoot){
+        console.log("shoot");
+    }
   }
 
   updatePosition() {

@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
             game.player.directionY = 10;
             break
           case "Space":
-          game.player.placeholder = 1;
+          game.player.shoot = 1;
           break
         }
         game.player.move()
@@ -49,6 +49,7 @@ window.addEventListener("load", () => {
     startGame();
   });
   restartButton.addEventListener("click", () => {
-    location.reload;
+    location.reload()
+    console.log("reload")
   });
 });

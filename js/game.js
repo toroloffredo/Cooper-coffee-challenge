@@ -13,7 +13,7 @@ class Game {
     this.width = 1100;
     this.player = new Player(this.gameScreen);
     this.obstacles = [new Obstacle(this.gameScreen)];
-    this.life = 3;
+    this.life = 1;
     this.score = 0;
     this.isGameOver = false;
     this.animateId;
@@ -46,7 +46,7 @@ class Game {
     this.update();
 
 
-    if (this.animateId % 200 === 0) {
+    if (this.animateId % 170 === 0) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
     console.log(this.animateId);
@@ -82,24 +82,11 @@ class Game {
       }
     });
     this.obstacles = obstaclesToKeep;
-    if (this.life === 0){
+    if (this.life <= 0){
       this.isGameOver = true;
+      
       console.log("Game Over");
-      return
-      //gameOver();
+       
     }
   }
 }
-
-
-
-
-
-
-    /* Replace with timer count down instead.
-    if (this.lives <= 0) {
-      this.isGameOver = true;
-      this.player.element.remove();
-      this.obstacle.element.remove();
-    }
-    */

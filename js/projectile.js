@@ -1,6 +1,7 @@
 class Projectiles {
   constructor(gameScreen, playerTop, playerWidth) {
     this.gameScreen = gameScreen;
+    this.top = playerTop;
     this.height = 40;
     this.width = 30;
     this.speed = 7;
@@ -26,8 +27,6 @@ class Projectiles {
     this.positionX += this.speed;
     this.updatePosition();
 
-    // this.element.style.left = `${this.positionX}px`;
-
     if (this.positionX > this.gameScreen.offsetWidth) {
       this.destroy();
     }
@@ -35,6 +34,7 @@ class Projectiles {
 
   updatePosition() {
     this.element.style.left = `${this.positionX}px`;
+    this.element.style.top = `${this.top}px`; // Set the top position of the element
   }
 
   destroy() {

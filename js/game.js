@@ -3,7 +3,6 @@ class Game {
   constructor() {
     this.startScreen = document.getElementById("splash-screen");
     this.gameScreen = document.getElementById("game-screen");
-    //this.gameplay = document.getElementById("gameplay");
     this.gameEndScreen = document.getElementById("game-over");
     this.scoresChecker = document.getElementById("score");
     this.lifesChecker = document.getElementById("life");  
@@ -13,7 +12,7 @@ class Game {
     this.width = 1100;
     this.player = new Player(this.gameScreen);
     this.obstacles = [new Obstacle(this.gameScreen)];
-    this.life = 3;
+    this.life = 50;
     this.score = 0;
     this.isGameOver = false;
     this.animateId;
@@ -44,22 +43,23 @@ class Game {
 
   gameLoop() {
     this.update();
+    this.player.move();
+    this.player.shooter();
+    this.player.updateProjectiles();
     
-    
-    
-
-    
-
     if (this.animateId % 170 === 0) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
+
     console.log(this.animateId);
+
     if (this.isGameOver) {
       console.log("Game Over");
       this.gameScreen.style.display = "none";
       this.board.style.display = "none";
       this.gameEndScreen.style.display = "block";
-    } else {
+    } 
+    else {
       this.animateId = requestAnimationFrame(() => this.gameLoop());
     }
   }

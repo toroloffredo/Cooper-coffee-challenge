@@ -1,3 +1,46 @@
+class Projectiles {
+  constructor(gameScreen, playerTop, playerWidth) {
+    this.gameScreen = gameScreen;
+    this.top = 0;
+    this.height = 40;
+    this.width = 30;
+    this.speed = 7;
+    this.positionX = 0;
+    this.positionY = 0;
+    this.element = null;
+
+    this.playerTop = playerTop;
+    this.playerWidth = playerWidth;
+  }
+
+  create() {
+    this.element = document.createElement("img");
+    this.element.src = "./images/cupOjoe.png";
+    this.element.style.position = "absolute";
+    this.element.style.width = `${this.width}px`;
+    this.element.style.height = `${this.height}px`;
+
+    this.gameScreen.appendChild(this.element);
+  }
+
+  move() {
+    this.positionX += this.speed;
+    this.updatePosition();
+
+    if (this.positionX > this.gameScreen.offsetWidth) {
+      this.destroy();
+    }
+  }
+
+  updatePosition() {
+    this.element.style.left = `${this.positionX}px`;
+  }
+
+  destroy() {
+    this.element.remove();
+  }
+}
+
 class Player {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
@@ -34,18 +77,15 @@ class Player {
     this.updatePosition();
   }
 
-   shooter() {
-      if (this.shoot) {
+  shooter() {
+    if (this.shoot) {
       if (!this.isShooting) {
         const projectile = new Projectiles(
-          this.gameScreen,   
-          this.top + this.height / 10,
+          this.gameScreen,
+          this.top + this.height / 2 - 10,
           this.left + this.width
         );
         projectile.create();
-        projectile.positionX = this.left + this.width;
-        projectile.positionY =
-          this.top + this.height / 2 - projectile.height / 2;
 
         this.projectiles.push(projectile);
         this.isShooting = true;

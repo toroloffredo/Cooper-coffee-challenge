@@ -13,7 +13,7 @@ class Game {
     this.width = 1100;
     this.player = new Player(this.gameScreen);
     this.obstacles = [new Obstacle(this.gameScreen)];
-    this.life = 1;
+    this.life = 3;
     this.score = 0;
     this.isGameOver = false;
     this.animateId;
@@ -45,6 +45,9 @@ class Game {
   gameLoop() {
     this.update();
 
+    
+
+    this.player.shooter = true;
 
     if (this.animateId % 170 === 0) {
       this.obstacles.push(new Obstacle(this.gameScreen));

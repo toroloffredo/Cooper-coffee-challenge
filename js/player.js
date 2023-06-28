@@ -6,7 +6,7 @@ class Player {
     this.left = 47;
     this.top = 680;
     this.directionY = 0;
-    this.shoot = 0;
+    this.shoot = false;
 
     this.element = document.createElement("img");
     this.element.src = "./images/download.png";
@@ -20,7 +20,7 @@ class Player {
 
     this.gameScreen.appendChild(this.element);
   }
-
+     
   
   move() {
     this.top += this.directionY;
@@ -35,7 +35,7 @@ class Player {
   }
 
   shoot() {
-    if(this.shoot){
+    if(this.shoot === true){
         console.log("shoot");
     }
   }

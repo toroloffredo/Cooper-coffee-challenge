@@ -138,7 +138,7 @@ button {
     display: inline-block;
     position: relative;
     background-color: #870007;
-    border: none;
+    border: 1px black solid;
     margin: 15px;
     text-align: center;
     font-size: 22px;

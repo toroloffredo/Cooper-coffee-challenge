@@ -2,9 +2,9 @@ class Projectiles {
   constructor(gameScreen, playerTop, playerWidth) {
     this.gameScreen = gameScreen;
     this.top = playerTop;
-    this.height = 40;
+    this.height = 25;
     this.width = 30;
-    this.speed = 7;
+    this.speed = 4;
     this.positionX = playerWidth;
     this.positionY = playerTop + 45;
     this.element = null;

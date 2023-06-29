@@ -3,7 +3,7 @@ class Obstacle {
     this.gameScreen = gameScreen;
     this.width = 70;
     this.height = 135;
-    // Rememenber to double check the "left" amount if you change to px units.
+    // Remenber to double check the "left" amount if you change to px units.
     this.left = 65;
     this.top = Math.floor(Math.random() * 300 + 70);
     this.directionX = 0;

@@ -5,18 +5,16 @@ window.addEventListener("load", () => {
   const backButton = document.getElementById("back-button");
   let game;
 
-   function howToPlay() {
+  function howToPlay() {
     console.log("instructions screen");
     game = new Game();
     game.instructions();
-   }
+  }
 
   function startGame() {
     console.log("start game");
     game = new Game();
     game.start();
-
- 
 
     document.addEventListener("keydown", (event) => {
       const key = event.key;

@@ -19,7 +19,6 @@ class Game {
     this.score = 0;
     this.isGameOver = false;
     this.animateId;
-  
   }
 
   start() {
@@ -41,9 +40,6 @@ class Game {
 
     //this.instructionScreen.style.height = `${this.height}px`;
     this.instructionScreen.style.width = `${this.width}px`;
-
-
-
   }
 
   gameLoop() {
@@ -55,7 +51,7 @@ class Game {
       projectile.move();
     });
 
-    if (this.animateId % 170 === 0) {
+    if (this.animateId % 50 === 0) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
 
@@ -119,6 +115,7 @@ class Game {
         if (projectile.didProjectileCollide(obstacle)) {
           console.log("Projectile collided with obstacle");
           obstacle.element.remove();
+          projectile.element.remove();
           this.score += 10;
           this.scoresChecker.textContent = `${this.score}`;
         }

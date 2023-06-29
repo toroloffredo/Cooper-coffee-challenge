@@ -8,6 +8,8 @@ window.addEventListener("load", () => {
     game = new Game();
     game.start();
 
+
+
     document.addEventListener("keydown", (event) => {
       const key = event.key;
       console.log(event);
@@ -23,7 +25,7 @@ window.addEventListener("load", () => {
             break;
           case " ":
             game.player.shoot = true;
-            game.player.shooter();
+            game.shooter();
             break;
         }
         game.player.move();
@@ -33,7 +35,7 @@ window.addEventListener("load", () => {
     document.addEventListener("keyup", (event) => {
       const key = event.key;
       console.log(event);
-      
+
       const possibleKeystrokes = ["ArrowUp", "ArrowDown", " "];
       if (possibleKeystrokes.includes(key)) {
         switch (key) {
@@ -46,7 +48,6 @@ window.addEventListener("load", () => {
             break;
         }
       }
-      game.player.directionY = 0;
     });
   }
 

@@ -10,9 +10,10 @@ body {
     padding: 0;
     text-align: center;
     overflow: hidden;
-    background: url("./images/pixelatedBackground2.png");  
+    background: url("./images/pixelatedBackground2.jpeg");  
     background-repeat: no-repeat;
     background-size: cover;
+    
     height: 100vh;
     display: flex;
     flex-flow: column;
@@ -69,6 +70,7 @@ h2 {
     top: 230px;
     height: 500px;
     width: 637px;
+    z-index: 2
 }
 
 .cooperLogo {
@@ -112,7 +114,7 @@ h2 {
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
     font-family: "PressStart", sans-serif;
-    z-index: 3;
+    z-index: 2;
 }
 
 #score  {

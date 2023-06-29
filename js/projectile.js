@@ -5,12 +5,9 @@ class Projectiles {
     this.height = 40;
     this.width = 30;
     this.speed = 7;
-    this.positionX = 0;
-    this.positionY = 0;
+    this.positionX = playerWidth;
+    this.positionY = playerTop + 45;
     this.element = null;
-
-    this.playerTop = playerTop;
-    this.playerWidth = playerWidth;
   }
 
   create() {
@@ -21,15 +18,12 @@ class Projectiles {
     this.element.style.height = `${this.height}px`;
 
     this.gameScreen.appendChild(this.element);
+    this.updatePosition();
   }
-
+  /* stop here */
   move() {
     this.positionX += this.speed;
     this.updatePosition();
-
-    if (this.positionX > this.gameScreen.offsetWidth) {
-      this.destroy();
-    }
   }
 
   updatePosition() {
@@ -37,7 +31,23 @@ class Projectiles {
     this.element.style.top = `${this.top}px`; // Set the top position of the element
   }
 
+  didProjectileCollide(obstacle) {
+      const playerRect = this.element.getBoundingClientRect();
+      const obstacleRect = obstacle.element.getBoundingClientRect();
+
+      if (
+        playerRect.left < obstacleRect.right &&
+        playerRect.right > obstacleRect.left &&
+        playerRect.top < obstacleRect.bottom &&
+        playerRect.bottom > obstacleRect.top
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+  }
+
   destroy() {
     this.element.remove();
   }
-}
+};

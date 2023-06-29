@@ -34,28 +34,7 @@ class Player {
     this.updatePosition();
   }
 
-   shooter() {
-      if (this.shoot) {
-      if (!this.isShooting) {
-        const projectile = new Projectiles(
-          this.gameScreen,   
-          this.top + this.height / 10,
-          this.left + this.width
-        );
-        projectile.create();
-        projectile.positionX = this.left + this.width;
-        projectile.positionY =
-          this.top + this.height / 2 - projectile.height / 2;
-
-        this.projectiles.push(projectile);
-        this.isShooting = true;
-      }
-    } else {
-      this.isShooting = false;
-    }
-  }
-
-  updateProjectiles() {
+   updateProjectiles() {
     this.projectiles.forEach((projectile) => {
       projectile.move();
 
@@ -68,13 +47,14 @@ class Player {
       (projectile) => projectile.positionX <= this.gameScreen.offsetWidth
     );
   }
-
+ /* stop here */
+  
   updatePosition() {
-    //this.element.style.left = `${this.left}px`;
+    this.element.style.left = `${this.left}px`;
     this.element.style.top = `${this.top}px`;
   }
 
-  didCollide(obstacle) {
+  didPlayerCollide(obstacle) {
     const playerRect = this.element.getBoundingClientRect();
     const obstacleRect = obstacle.element.getBoundingClientRect();
 
@@ -87,6 +67,10 @@ class Player {
       return true;
     } else {
       return false;
-    }
   }
+  }
+  destroy() {
+    this.element.remove();
+  }
+
 }

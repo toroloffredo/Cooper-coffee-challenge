@@ -1,14 +1,22 @@
 window.addEventListener("load", () => {
   const startButton = document.getElementById("start-button");
   const restartButton = document.getElementById("restart-button");
+  const intructionsButton = document.getElementById("instructions-button");
+  const backButton = document.getElementById("back-button");
   let game;
+
+   function howToPlay() {
+    console.log("instructions screen");
+    game = new Game();
+    game.instructions();
+   }
 
   function startGame() {
     console.log("start game");
     game = new Game();
     game.start();
 
-
+ 
 
     document.addEventListener("keydown", (event) => {
       const key = event.key;
@@ -54,6 +62,16 @@ window.addEventListener("load", () => {
   startButton.addEventListener("click", function () {
     startGame();
   });
+
+  intructionsButton.addEventListener("click", function () {
+    howToPlay();
+  });
+
+  backButton.addEventListener("click", () => {
+    location.reload();
+    console.log("back");
+  });
+
   restartButton.addEventListener("click", () => {
     location.reload();
     console.log("reload");

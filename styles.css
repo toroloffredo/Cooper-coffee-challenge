@@ -13,7 +13,6 @@ body {
     background: url("./images/pixelatedBackground2.jpeg");  
     background-repeat: no-repeat;
     background-size: cover;
-    
     height: 100vh;
     display: flex;
     flex-flow: column;
@@ -30,6 +29,24 @@ body {
     background-image: url("./images/pixelatedCurtains2.jpeg");
     text-align: center;
 
+}
+
+#instructions-screen {
+    display: none;
+    flex-flow: column;
+   
+    position: relative;
+    overflow: hidden;
+    height: 173vh;
+    align-content: center;
+    background-image: url("./images/pixelatedCurtains2.jpeg");
+    background-size: cover;
+    z-index: 1;
+    background-position: right;
+    font-family: "PressStart", sans-serif;
+    color: #FDFBFB;
+    text-shadow: 4px 3px 0px #040404;
+    text-align: left;
 }
 
 #splash-screen h1,
@@ -94,6 +111,22 @@ h2 {
     z-index: 1;
     background-position: right;
 }
+
+.intro-text-h2 {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.intro-text-p {
+    padding-left: 80px;
+}
+
+quote {
+    position: relative;
+    top: 262px;
+    text-align: right;
+}
+
 
 #game-over {
     display: none;
@@ -184,6 +217,13 @@ button:after {
       top: 0;
       border-left: 7px #040404 solid;
       border-right: 7px #040404 solid;
+}
+
+#back-button {
+    position: relative;
+    margin-left: 440px;
+    top: 100px;
+
 }
 
 #restart-button {

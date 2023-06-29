@@ -3,6 +3,7 @@
 class Game {
   constructor() {
     this.startScreen = document.getElementById("splash-screen");
+    this.instructionScreen = document.getElementById("instructions-screen");
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-over");
     this.scoresChecker = document.getElementById("score");
@@ -32,6 +33,17 @@ class Game {
     this.board.style.display = "inline-block";
 
     this.gameLoop();
+  }
+
+  instructions() {
+    this.startScreen.style.display = "none";
+    this.instructionScreen.style.display = "flex";
+
+    //this.instructionScreen.style.height = `${this.height}px`;
+    this.instructionScreen.style.width = `${this.width}px`;
+
+
+
   }
 
   gameLoop() {
@@ -107,7 +119,7 @@ class Game {
         if (projectile.didProjectileCollide(obstacle)) {
           console.log("Projectile collided with obstacle");
           obstacle.element.remove();
-          this.score += 100;
+          this.score += 10;
           this.scoresChecker.textContent = `${this.score}`;
         }
       });

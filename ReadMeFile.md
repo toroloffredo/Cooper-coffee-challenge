@@ -1,4 +1,4 @@
-# Project's name
+# Cooper's Coffee Challenge
 
 [Click here to see deployed game](https://toroloffredo.github.io/Cooper-coffee-challenge/)
 

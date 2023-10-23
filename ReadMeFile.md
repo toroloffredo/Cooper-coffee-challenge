@@ -5,18 +5,27 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Design](#design)
 - [Project Requirements](#mvp)
 - [Version History](#version-history)
   - [Version 1.0.0](#version-100-mvp)
   - [Version 1.1.1](#version-111)
 - [Future Improvements](#future-improvements)
 - [Data Structure](#data-structure)
-- [States and Transitions](#states-y-states-transitions)
+- [States and Transitions](#states-and-transitions)
 - [Links](#links)
 
 ## Description
 
 The purpose of this project is to create a browser-based game using HTML, CSS, vanilla JavaScript, DOM manipulation, and Object-Oriented Programming (OOP) for my first bootcamp project.
+
+The game was developed based on the 90's TV hit Twin Peaks created by David Lynch and Mark Frost.
+
+## Design  
+
+In shaping the game's design, I drew from a retro pixel art aesthetic. I meticulously crafted all game characters, in the charming pixelated style. The backgrounds, sourced online, were also pixelated for visual coherence.  
+
+Additionally, I created responsive, retro-styled buttons from scratch, providing intuitive hover and click interactions. This design combines the charm of retro pixel art with modern usability, enhancing the overall player experience.
 
 ## MVP
 
@@ -96,7 +105,7 @@ destroy
 create  
 didProjectileCollide
 
-## States y States Transitions
+## States and Transitions
 
 Start Screen
 Instructions Screen
@@ -105,7 +114,8 @@ Game Over Screen
 
 ## Links
 
-- [Trello Link](https://trello.com/invite/b/Er37E60R/ATTI19e5c6130d8da426d8cc89b2a46a43e435169A66/ccc-board)
-- [Slides Link](https://docs.google.com/presentation/d/1fD7KHiSTRlcmvFnGGGiVWKYrFFJM3DlRQ2RYGgaknLA/edit?usp=sharing)
+- [LinkedIn Profile](https://linkedin.com/in/jaime-toro-loffredo)
 - [Github repository Link](https://github.com/toroloffredo/Cooper-coffee-challenge)
 - [Deployment Link](https://toroloffredo.github.io/Cooper-coffee-challenge/)
+- [Trello Link](https://trello.com/invite/b/Er37E60R/ATTI19e5c6130d8da426d8cc89b2a46a43e435169A66/ccc-board)
+- [Slides Link](https://docs.google.com/presentation/d/1fD7KHiSTRlcmvFnGGGiVWKYrFFJM3DlRQ2RYGgaknLA/edit?usp=sharing)

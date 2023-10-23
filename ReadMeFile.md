@@ -1,10 +1,24 @@
-# Cooper's Coffee Challenge
+# Cooper's Coffee Challenge Game
 
-[Click here to see deployed game](https://toroloffredo.github.io/Cooper-coffee-challenge/)
+[Click here to play](https://toroloffredo.github.io/Cooper-coffee-challenge/)
+
+## Table of Contents
+
+- [Description](#description)
+- [Project Requirements](#mvp)
+- [Version History](#version-history)
+  - [Version 1.0.0](#version-100-mvp)
+  - [Version 1.1.1](#version-111)
+- [Future Improvements](#future-improvements)
+- [Data Structure](#data-structure)
+- [States and Transitions](#states-y-states-transitions)
+- [Links](#links)
 
 ## Description
 
-The purpose of this project is to create a browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP) for our first bootcamp project.
+The purpose of this project is to create a browser-based game using HTML, CSS, vanilla JavaScript, DOM manipulation, and Object-Oriented Programming (OOP) for my first bootcamp project.
+
+## MVP
 
 The Minimum Viable Product (MVP) requirements of the project, to be achieved within a week were as follow:
 
@@ -52,7 +66,7 @@ Several gameplay tweaks and bug fixes
 - Changed the size of the assets to fit game screen better.
 - Removed/commented out several console logs.
 
-### Future Improvements  
+### Future Improvements
 
 - Add assets so several different iterations of enemies appear on the screen.
 - Add sound effects for shooting, collision, game start and game over.
@@ -88,10 +102,6 @@ Start Screen
 Instructions Screen
 Game Screen
 Game Over Screen
-
-## Task
-
-List of tasks in order of priority
 
 ## Links
 

@@ -1,11 +1,14 @@
 class Obstacle {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.width = 70;
-    this.height = 135;
+    this.width = 50;
+    this.height = 100;
+
     // Remenber to double check the "left" amount if you change to px units.
-    this.left = 65;
-    this.top = Math.floor(Math.random() * 300 + 70);
+    this.left = 73;
+
+    //Varies the vertical place were the obstacle spawns.
+    this.top = Math.floor(Math.random() * 500 + 20);
     this.directionX = 0;
     this.directionY = 0;
     this.element = document.createElement("img");
@@ -24,7 +27,8 @@ class Obstacle {
   }
 
   move() {
-    this.left -= 0.3;
+    /*sets the movement speed of the obstacle*/
+    this.left -= 0.18;
 
     this.updatePosition();
   }

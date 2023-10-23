@@ -1,5 +1,3 @@
-// -- stop here! --
-
 class Game {
   constructor() {
     this.startScreen = document.getElementById("splash-screen");
@@ -7,6 +5,7 @@ class Game {
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-over");
     this.scoresChecker = document.getElementById("score");
+    this.highScoreText = document.getElementById("highScoreText");
     this.lifesChecker = document.getElementById("life");
     this.timer = document.getElementById("timer");
     this.board = document.getElementById("scoreTimer");
@@ -15,8 +14,12 @@ class Game {
     this.player = new Player(this.gameScreen);
     this.obstacles = [new Obstacle(this.gameScreen)];
     this.projectiles = [];
+    this.lastShotTime = 0;
     this.life = 3;
     this.score = 0;
+    this.highScore = 0;
+
+    //change it to check game over screen
     this.isGameOver = false;
     this.animateId;
   }
@@ -58,36 +61,43 @@ class Game {
     //console.log(this.animateId);
 
     if (this.isGameOver) {
-      console.log("Game Over");
+      //console.log("Game Over");
       this.gameScreen.style.display = "none";
       this.board.style.display = "none";
-      this.gameEndScreen.style.display = "block";
+      this.gameEndScreen.style.display = "flex";
     } else {
       this.animateId = requestAnimationFrame(() => this.gameLoop());
     }
   }
 
   shooter() {
-    if (this.player.shoot) {
-      
-        const projectile = new Projectiles(
-          this.gameScreen,
-          this.player.top + this.player.height / 10,
-          this.player.left + this.player.width
-        );
-        projectile.create();
-        projectile.positionX = this.player.left + this.player.width;
-        projectile.positionY =
-          this.player.top + this.player.height / 2 - projectile.height / 2;
+    const now = Date.now();
 
-        this.projectiles.push(projectile);
-        this.player.shoot = true;
-      
+    if (now - this.lastShotTime >= 380) {
+      const projectile = new Projectiles(
+        this.gameScreen,
+        this.player.top + this.player.height / 10,
+        this.player.left + this.player.width
+      );
+      projectile.create();
+      projectile.positionX = this.player.left + this.player.width;
+      projectile.positionY =
+        this.player.top + this.player.height / 2 - projectile.height / 2;
+
+      this.projectiles.push(projectile);
+      this.player.shoot = true;
+
+      this.lastShotTime = now;
     } else {
       this.player.shoot = false;
     }
   }
 
+  setHighScore(score) {
+    if (score > this.highScore) {
+      this.highScore = score;
+    }
+  }
   update() {
     this.player.updateProjectiles();
     this.player.move();
@@ -99,7 +109,7 @@ class Game {
     this.obstacles.forEach((obstacle) => {
       obstacle.move();
       if (this.player.didPlayerCollide(obstacle)) {
-        console.log("Player collided with obstacle");
+        //console.log("Player collided with obstacle");
         obstacle.element.remove();
         this.life -= 1;
         this.lifesChecker.textContent = `${this.life}`;
@@ -113,7 +123,7 @@ class Game {
       projectile.move();
       this.obstacles.forEach((obstacle) => {
         if (projectile.didProjectileCollide(obstacle)) {
-          console.log("Projectile collided with obstacle");
+          //console.log("Projectile collided with obstacle");
           obstacle.element.remove();
           projectile.element.remove();
           this.score += 10;
@@ -131,7 +141,8 @@ class Game {
 
     if (this.life <= 0) {
       this.isGameOver = true;
-      console.log("Game Over");
+      this.setHighScore(this.score);
+      //console.log("Game Over");
     }
   }
 }

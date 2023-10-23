@@ -1,8 +1,8 @@
 class Player {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.width = 70;
-    this.height = 135;
+    this.width = 55;
+    this.height = 110;
     this.left = 47;
     this.top = 680;
     this.directionY = 0;
@@ -47,7 +47,6 @@ class Player {
       (projectile) => projectile.positionX <= this.gameScreen.offsetWidth
     );
   }
- /* stop here */
   
   updatePosition() {
     this.element.style.left = `${this.left}px`;
@@ -63,6 +62,7 @@ class Player {
       playerRect.right > obstacleRect.left &&
       playerRect.top < obstacleRect.bottom &&
       playerRect.bottom > obstacleRect.top
+      
     ) {
       return true;
     } else {

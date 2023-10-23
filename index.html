@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Cooper's Coffee Challenge</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cooper's Coffee Challenge</title>
+</head>
 
-    <body> 
-        <main>
-            <!--All the html components that make the initial splash screen-->
-       
-            
-            <div id="splash-screen">
-                <!--Look for logo splash image-->
-                <h1>Twin Peaks</h1>
-                <h2>Cooper's Coffee Challenge</h2>
-                <img src="./images/download.png" alt="" class="cooperLogo"> 
-                <br>
-                <div id="intro-buttons">
-                    <button id="start-button">Start Game</button>
-                    <button id="instructions-button">Instructions</button>
-                </div>
-
-            </div>
-
-            <div id="instructions-screen">
-                <h2 id="howTo-instructions" class="intro-text-h2"> how to play:</h2>
-                <p class="intro-text-p">Agent Cooper is trying to keep Bob from leaving the red room!</p>
-                <p class="intro-text-p">Use the up and down arrow keys to move Cooper.</p>
-                <p class="intro-text-p">You can throw cups of hot coffee to Bob hitting the space bar.</p>
-
-                <button id="back-button">Back</button>
-
-                <quote id="quote-owls"> -- Remember, the owls are not what they seem...</quote>
-            </div>
+<body>
+  <main>
+    <!--All the html components that make the initial splash screen-->
 
 
-            <!--All the html components that make the main game screen-->
-            <div id="gameplay">
+    <div id="splash-screen">
 
-                <div id="scoreTimer">
-                    <p id="scoreText">Score: <span id="score">0</span></p>
-                    <p id="lifeText">Lifes Remaining: <span id="life">3</span></p>
-                    <!-- <p id="timeText">Time Remaining: <span id="timer">1:00</span></p> -->
-                </div>
-                <div id="game-screen"></div>
-            </div>
+      <h1>Twin Peaks</h1>
+      <h2>Cooper's Coffee Challenge</h2>
+      <img src="./images/download.png" alt="" class="cooperLogo">
+      <br>
+      <div id="intro-buttons">
+        <button id="start-button">Start Game</button>
+        <button id="instructions-button">Instructions</button>
+      </div>
 
-            <!-- this will toggle between game won and game lost-->
-            <div id="game-over">
-                <h1 id="game-over-text">Game Over</h1>
-                
-                <img src="./images/pixelCooper.png" alt="" class="cooperPixel" />
-                
-                <br />
-                <button id="restart-button">Restart</button>
-                <!-- -->
-                
-            </div>
+    </div>
+
+    <div id="instructions-screen">
+      <h2 id="howTo-instructions" class="intro-text-h2"> how to play:</h2>
+      <p class="intro-text-p">Agent Cooper is trying to keep Bob from leaving the red room!</p>
+      <p class="intro-text-p">Use the up and down arrow keys to move Cooper.</p>
+      <p class="intro-text-p">You can throw cups of hot coffee to Bob hitting the space bar.</p>
+
+      <button id="back-button">Back</button>
+
+      <quote id="quote-owls"> -- Remember, the owls are not what they seem...</quote>
+    </div>
 
 
+    <!--All the html components that make the main game screen-->
+    <div id="gameplay">
+z
+      <div id="scoreTimer">
+        <p id="scoreText">Score: <span id="score">0</span></p>
+        <p id="lifeText">Lifes Remaining: <span id="life">3</span></p>
+        <!-- <p id="timeText">Time Remaining: <span id="timer">1:00</span></p> -->
+      </div>
+      <div id="game-screen"></div>
+    </div>
 
+    <!-- this will toggle between game won and game lost-->
+    <div id="game-over">
+      <h1 class="game-over-text-header">Game Over</h1>
+      
+      <h2 class="game-over-text-score">High Score: <span id="highScore">0</span></h2>  
+      
+      <img src="./images/pixelCooper.png" alt="" class="cooperPixel" />
+      
+      <button id="restart-button">Restart</button>
+      <!-- -->
+
+    </div>
 
 
 
-        </main>
-        <!--Link JS files here-->
-        <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/game.js"></script>
-        <script type="text/javascript" src="js/player.js"></script>
-        <script type="text/javascript" src="js/obstacle.js"></script>
-        <script type="text/javascript" src="js/projectile.js"></script> 
-    </body>
+
+
+  </main>
+  <!--Link JS files here-->
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/obstacle.js"></script>
+  <script type="text/javascript" src="js/projectile.js"></script>
+</body>
+
 </html>

@@ -34,7 +34,6 @@ body {
 #instructions-screen {
     display: none;
     flex-flow: column;
-   
     position: relative;
     overflow: hidden;
     height: 173vh;
@@ -73,18 +72,9 @@ h2 {
     
 }
 
-#game-over-text {
-    position: relative;
-    top: 180px;
-    display: block;
-    font-family: "PressStart", sans-serif;
-    z-index: 2;
-    margin: 0;
-}
-
 .cooperPixel {
     position: relative;
-    top: 230px;
+    top: 80px;
     height: 500px;
     width: 637px;
     z-index: 2
@@ -130,15 +120,46 @@ quote {
 
 #game-over {
     display: none;
-    position: relative;
-    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     overflow: hidden;
-    top: -128px;
     height: 1100px;
     width: 900px;
     background-image: url("./images/pixelatedCurtains2.jpeg");
     z-index: 1;
 }
+
+.game-over-text-header {
+    font-family: "PressStart", sans-serif;
+    z-index: 2;
+    margin: 50px 50px;
+}
+.game-over-text-score {
+    font-family: "PressStart", sans-serif;
+    z-index: 2;
+}
+#highScoreText  {
+    color: #FDFBFB;
+    text-shadow: 4px 3px 0px #040404;
+    font-family: "PressStart", sans-serif;
+    font-size: 22px;
+    z-index: 2;
+    margin: 0;
+}
+
+#high-scores-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+    width: 900px;
+    color: #FDFBFB;
+    text-shadow: 4px 3px 0px #040404;
+    font-family: "PressStart", sans-serif;
+    z-index: 2;
+}
+
 
 #scoreTimer {
     display: none;
@@ -163,10 +184,6 @@ quote {
     color: #FDFBFB;
     text-shadow: 4px 3px 0px #040404;
     font-family: "PressStart", sans-serif;
-}
-
-#game-over {
-    display: none;
 }
 
 button {
@@ -227,5 +244,5 @@ button:after {
 }
 
 #restart-button {
-    top: 270px;
+    top: 170px;
 }

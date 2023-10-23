@@ -3,9 +3,11 @@
 [Click here to see deployed game](https://toroloffredo.github.io/Cooper-coffee-challenge/)
 
 ## Description
+
 The purpose of this project is to create a browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP).
 
 ## MVP
+
 Render a game in the browser.
 
 Have logic for winning and/or losing and show feedback to the player.
@@ -26,17 +28,18 @@ Game deployed online using GitHub Pages so anyone can play it.
 
 Code should follow the principles of KISS (Keep It Simple Stupid) and DRY (Don’t Repeat Yourself).
 
-
 ## Backlog
-High score - top 5
-Music and sound 
-Two to tree different enemies spawned at random intervals.
-Mobile friendly version.
-Tweaks and fixes.
 
+High score - top 5.
+speed increase over time.
+Music and sound
+Two to tree different enemies spawned at random intervals.
+Tweaks and fixes.
+Mobile friendly version.
 
 ## Data structure
-Classes: 
+
+Classes:
 Game  
 Player  
 Projectiles  
@@ -45,7 +48,7 @@ Obstacle
 Methods:  
 Start  
 Instructions  
-gameLoop    
+gameLoop
 shooter  
 update  
 move  
@@ -56,17 +59,16 @@ destroy
 create  
 didProjectileCollide  
 
-
 ## States y States Transitions
+
 Start Screen
 Instructions Screen
 Game Screen
 Game Over Screen
 
-
 ## Task
-_List of tasks in order of priority_
 
+List of tasks in order of priority_
 
 ## Links
 

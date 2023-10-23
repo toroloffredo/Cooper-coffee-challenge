@@ -54,6 +54,14 @@ class Obstacle {
       return false;
     }
   }
+  isOutOfGameArea() {
+    const obstacleRect = this.element.getBoundingClientRect();
+  
+    // Adjust this value based on game area
+    const gameAreaLeftEdge = 0; 
+
+    return obstacleRect.right < gameAreaLeftEdge;
+  }
 
   destroy() {
     this.element.remove();

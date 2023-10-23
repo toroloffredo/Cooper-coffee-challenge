@@ -58,7 +58,15 @@ class Game {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
 
-    //console.log(this.animateId);
+    this.obstacles = this.obstacles.filter((obstacle) => {
+      if (obstacle.isOutOfGameArea()) {
+        this.life -= 1;
+        this.lifesChecker.textContent = `${this.life}`;
+        return false; // Remove the obstacle
+      }
+      return true;
+    });
+
 
     if (this.isGameOver) {
       //console.log("Game Over");

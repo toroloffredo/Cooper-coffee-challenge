@@ -1,248 +1,249 @@
 @font-face {
-    font-family: "Silkscreen";
-    src: url(./fonts/slkscre.ttf) format("truetype");
-    font-family: "PressStart";
-        src: url(./fonts/PressStart2P-Regular.ttf) format("truetype");
+  font-family: "Silkscreen";
+  src: url(./fonts/slkscre.ttf) format("truetype");
+  font-family: "PressStart";
+  src: url(./fonts/PressStart2P-Regular.ttf) format("truetype");
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    overflow: hidden;
-    background: url("./images/pixelatedBackground2.jpeg");  
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    z-index: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  background: url("./images/pixelatedBackground2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  z-index: 0;
 }
 
 #splash-screen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 800px;
-    width: 800px;
-    background-image: url("./images/pixelatedCurtains2.jpeg");
-    text-align: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 800px;
+  background-image: url("./images/pixelatedCurtains2.jpeg");
+  text-align: center;
 }
 
 #instructions-screen {
-    display: none;
-    flex-flow: column;
-    position: relative;
-    overflow: hidden;
-    height: 173vh;
-    align-content: center;
-    background-image: url("./images/pixelatedCurtains2.jpeg");
-    background-size: cover;
-    z-index: 1;
-    background-position: right;
-    font-family: "PressStart", sans-serif;
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    text-align: left;
+  display: none;
+  flex-flow: column;
+  position: relative;
+  overflow: hidden;
+  height: 173vh;
+  align-content: center;
+  background-image: url("./images/pixelatedCurtains2.jpeg");
+  background-size: cover;
+  z-index: 1;
+  background-position: right;
+  font-family: "PressStart", sans-serif;
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  text-align: left;
 }
 
 #splash-screen h1,
 #splash-screen h2 {
-    display: block;
-    font-family: "PressStart", sans-serif;
-    position: absolute;
-    z-index: 2;
-    margin : 0;
+  display: block;
+  font-family: "PressStart", sans-serif;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
 }
 
 h1 {
-    color: #14A61D;
-    text-shadow: 4px 3px 0px #073709;
-    align-items: center;
-    top: 132px;
-    
+  color: #14a61d;
+  text-shadow: 4px 3px 0px #073709;
+  align-items: center;
+  top: 132px;
 }
 
 h2 {
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    top: 217px;
-    
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  top: 217px;
 }
 
 .cooperPixel {
-    position: relative;
-    top: 80px;
-    height: 500px;
-    width: 637px;
-    z-index: 2
+  position: relative;
+  top: 80px;
+  height: 500px;
+  width: 637px;
+  z-index: 2;
 }
 
 .cooperLogo {
-    height: 500px;
-    margin-top: 400px;
-    margin-left: 70px;
+  height: 500px;
+  margin-top: 400px;
+  margin-left: 70px;
 }
 
 #intro-buttons {
-    margin-top: 300px;
+  margin-top: 300px;
 }
 
 #game-screen {
-    display: none;
-    position: relative;
-    align-content: center;
-    overflow: hidden;
-    top: 30px;
-    background-image: url("./images/pixelatedFloor2.jpeg");
-    background-size: cover;
-    z-index: 1;
-    background-position: right;
+  display: none;
+  position: relative;
+  align-content: center;
+  overflow: hidden;
+  top: 30px;
+  background-image: url("./images/pixelatedFloor2.jpeg");
+  background-size: cover;
+  z-index: 1;
+  background-position: right;
 }
 
 .intro-text-h2 {
-    padding-top: 100px;
-    padding-left: 50px;
+  padding-top: 100px;
+  padding-left: 50px;
 }
 
 .intro-text-p {
-    padding-left: 80px;
+  padding-left: 80px;
 }
 
+.version-text-p {
+  padding-top: 10px;
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  font-family: "PressStart", sans-serif;
+  z-index: 2;
+}
 quote {
-    position: relative;
-    top: 262px;
-    text-align: right;
+  position: relative;
+  top: 262px;
+  text-align: right;
 }
-
 
 #game-over {
-    display: none;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    height: 1100px;
-    width: 900px;
-    background-image: url("./images/pixelatedCurtains2.jpeg");
-    z-index: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  height: 1100px;
+  width: 900px;
+  background-image: url("./images/pixelatedCurtains2.jpeg");
+  z-index: 1;
 }
 
 .game-over-text-header {
-    font-family: "PressStart", sans-serif;
-    z-index: 2;
-    margin: 50px 50px;
+  font-family: "PressStart", sans-serif;
+  z-index: 2;
+  margin: 50px 50px;
 }
 .game-over-text-score {
-    font-family: "PressStart", sans-serif;
-    z-index: 2;
+  font-family: "PressStart", sans-serif;
+  z-index: 2;
 }
-#highScoreText  {
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    font-family: "PressStart", sans-serif;
-    font-size: 22px;
-    z-index: 2;
-    margin: 0;
+#highScoreText {
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  font-family: "PressStart", sans-serif;
+  font-size: 22px;
+  z-index: 2;
+  margin: 0;
 }
 
 #high-scores-container {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    align-content: center;
-    width: 900px;
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    font-family: "PressStart", sans-serif;
-    z-index: 2;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  align-content: center;
+  width: 900px;
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  font-family: "PressStart", sans-serif;
+  z-index: 2;
 }
-
 
 #scoreTimer {
-    display: none;
-    position: relative;
-    top: 20px;
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    font-family: "PressStart", sans-serif;
-    z-index: 2;
+  display: none;
+  position: relative;
+  top: 20px;
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  font-family: "PressStart", sans-serif;
+  z-index: 2;
 }
 
-#score  {
-    display: none;
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    font-family: "PressStart", sans-serif;
-    z-index: 2;
+#score {
+  display: none;
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  font-family: "PressStart", sans-serif;
+  z-index: 2;
 }
 
 #timer {
-    display: none;
-    color: #FDFBFB;
-    text-shadow: 4px 3px 0px #040404;
-    font-family: "PressStart", sans-serif;
+  display: none;
+  color: #fdfbfb;
+  text-shadow: 4px 3px 0px #040404;
+  font-family: "PressStart", sans-serif;
 }
 
 button {
-    display: inline-block;
-    position: relative;
-    background-color: #870007;
-    border: 1px black solid;
-    margin: 15px;
-    text-align: center;
-    font-size: 22px;
-    padding: 20px;
-    width: 300px;
-    height: 80px;
-    font-family: "PressStart";
-    text-decoration: none;
-    color: #FDFBFB;
-    box-shadow: inset -5px -5px 0px 0px #540004;
+  display: inline-block;
+  position: relative;
+  background-color: #870007;
+  border: 1px black solid;
+  margin: 15px;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 300px;
+  height: 80px;
+  font-family: "PressStart";
+  text-decoration: none;
+  color: #fdfbfb;
+  box-shadow: inset -5px -5px 0px 0px #540004;
 }
 
-button:hover{
-        background-color: #861016;
-        box-shadow: inset 5px 5px 0px 0px #540004;
+button:hover {
+  background-color: #861016;
+  box-shadow: inset 5px 5px 0px 0px #540004;
 }
 
 button:active {
-        background-color: #B30F0F;
-        box-shadow: inset -5px -5px 0px 0px #540004;
+  background-color: #b30f0f;
+  box-shadow: inset -5px -5px 0px 0px #540004;
 }
 
-button:before, 
+button:before,
 button:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      box-sizing: content-box;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
 }
 
 button:before {
-      top: -7px;
-      left: 0;
-      border-top: 7px #040404 solid;
-      border-bottom: 7px #040404 solid;
+  top: -7px;
+  left: 0;
+  border-top: 7px #040404 solid;
+  border-bottom: 7px #040404 solid;
 }
 
 button:after {
-      left:-7px;
-      top: 0;
-      border-left: 7px #040404 solid;
-      border-right: 7px #040404 solid;
+  left: -7px;
+  top: 0;
+  border-left: 7px #040404 solid;
+  border-right: 7px #040404 solid;
 }
 
 #back-button {
-    position: relative;
-    margin-left: 440px;
-    top: 100px;
-
+  position: relative;
+  margin-left: 440px;
+  top: 100px;
 }
 
 #restart-button {
-    top: 170px;
+  top: 170px;
 }

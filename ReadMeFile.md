@@ -4,38 +4,61 @@
 
 ## Description
 
-The purpose of this project is to create a browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP).
+The purpose of this project is to create a browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP) for our first bootcamp project.
 
-## MVP
+The Minimum Viable Product (MVP) requirements of the project, to be achieved within a week were as follow:
 
-Render a game in the browser.
+- Render a game in a browser.
 
-Have logic for winning and/or losing and show feedback to the player.
+- Have logic for winning and/or losing and show feedback to the player.
 
-Game must have logic that allows the player to win or lose.
+- Game must have logic that allows the player to win or lose.
 
-Game code must be organized in separate files for HTML, CSS, and JavaScript.
+- Game code must be organized in separate files for HTML, CSS, and JavaScript.
 
-Use plain JavaScript for DOM manipulation.
+- Use plain JavaScript for DOM manipulation.
 
-Game entities and elements must be organized using classes and OOP.
+- Game entities and elements must be organized using classes and OOP.
 
-Have a repo on GitHub.
+- Have a repo on GitHub.
 
-Have at least one (1) commit per day that you worked on.
+- Have at least one (1) commit per day that you worked on.
 
-Game deployed online using GitHub Pages so anyone can play it.
+- Game deployed online using GitHub Pages so anyone can play it.
 
-Code should follow the principles of KISS (Keep It Simple Stupid) and DRY (Don’t Repeat Yourself).
+- Code should follow the principles of KISS (Keep It Simple Stupid) and DRY (Don’t Repeat Yourself).
 
-## Backlog
+## Version History
 
-High score - top 5.
-speed increase over time.
-Music and sound
-Two to tree different enemies spawned at random intervals.
-Tweaks and fixes.
-Mobile friendly version.
+### Version 1.0.0 (MVP)
+
+Full MVP requirements met, but many features remain in the backlog:
+
+- High score - top 5.
+- Speed increase over time.
+- Music and sound.
+- Two to tree different enemies spawned at random intervals.
+- Mobile friendly version.
+
+### Version 1.1.1
+
+Several gameplay tweaks and bug fixes
+
+- Fixed player movement speed to increase dificulty slightly.
+- Fixed projectile being shot in rapid succession when the space bar was holded down.
+- Added version number to splash screen.
+- Added High Score to Game Over screen.
+- Fixed issue were lives were not being deducted whenever the enemy reached the left edge of the game screen.
+- Changed the size of the assets to fit game screen better.
+- Removed/commented out several console logs.
+
+### Future Improvements  
+
+- Add assets so several different iterations of enemies appear on the screen.
+- Add sound effects for shooting, collision, game start and game over.
+- Add music.
+- Add top 5 highscores to game over screen with player initials.
+- Mobile friendly version with touchcreen buttons instead of key presses.
 
 ## Data structure
 
@@ -43,7 +66,7 @@ Classes:
 Game  
 Player  
 Projectiles  
-Obstacle  
+Obstacle
 
 Methods:  
 Start  
@@ -57,7 +80,7 @@ updatePosition
 didPlayerCollide  
 destroy  
 create  
-didProjectileCollide  
+didProjectileCollide
 
 ## States y States Transitions
 
@@ -68,7 +91,7 @@ Game Over Screen
 
 ## Task
 
-List of tasks in order of priority_
+List of tasks in order of priority
 
 ## Links
 

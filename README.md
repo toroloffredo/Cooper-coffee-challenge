@@ -1,4 +1,5 @@
-# Cooper's Coffee Challenge Game
+
+# Cooper's Coffee Challenge Game ![coffee cup](/images/cupOJoe.png)
 
 [Click here to play](https://toroloffredo.github.io/Cooper-coffee-challenge/)
 
@@ -23,7 +24,7 @@ The game was developed based on the 90's TV hit Twin Peaks created by David Lync
 
 ## Design  
 
-In shaping the game's design, I drew from a retro pixel art aesthetic. I meticulously crafted all game characters, in the charming pixelated style. The backgrounds, sourced online, were also pixelated for visual coherence.  
+In shaping the game's design, I drew from a retro pixel art aesthetic. I crafted the game characters in this style. The backgrounds, sourced online, were also pixelated for visual coherence.  
 
 Additionally, I created responsive, retro-styled buttons from scratch, providing intuitive hover and click interactions. This design combines the charm of retro pixel art with modern usability, enhancing the overall player experience.
 
@@ -65,14 +66,14 @@ Full MVP requirements met, but many features remain in the backlog:
 
 ### Version 1.1.1
 
-Several gameplay tweaks and bug fixes
+Several gameplay tweaks and bug fixes:
 
-- Fixed player movement speed to increase dificulty slightly.
-- Fixed projectile being shot in rapid succession when the space bar was holded down.
+- Fixed player movement speed to slightly increase dificulty.
+- Fixed projectile being shot in rapid succession when the space bar was held down.
+- Fixed the size of the assets to fit game screen better.
+- Fixed issue were lives were not being deducted whenever the enemy reached the left edge of the game screen.
 - Added version number to splash screen.
 - Added High Score to Game Over screen.
-- Fixed issue were lives were not being deducted whenever the enemy reached the left edge of the game screen.
-- Changed the size of the assets to fit game screen better.
 - Removed/commented out several console logs.
 
 ### Future Improvements
@@ -85,32 +86,34 @@ Several gameplay tweaks and bug fixes
 
 ## Data structure
 
-Classes:
-Game  
-Player  
-Projectiles  
-Obstacle
+Classes:  
+
+- Game  
+- Player  
+- Projectiles  
+- Obstacle  
 
 Methods:  
-Start  
-Instructions  
-gameLoop
-shooter  
-update  
-move  
-updateProjecties  
-updatePosition  
-didPlayerCollide  
-destroy  
-create  
-didProjectileCollide
+
+- Start  
+- Instructions  
+- gameLoop
+- shooter  
+- update  
+- move  
+- updateProjecties  
+- updatePosition  
+- didPlayerCollide  
+- destroy  
+- create  
+- didProjectileCollide
 
 ## States and Transitions
 
-Start Screen
-Instructions Screen
-Game Screen
-Game Over Screen
+Start Screen  
+Instructions Screen  
+Game Screen  
+Game Over Screen  
 
 ## Links
 
